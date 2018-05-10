@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <H1>Mitchell Valentine</H1>
+    <H2>Love, Enlightenment, Enigma</H2>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
