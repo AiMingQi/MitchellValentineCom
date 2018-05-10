@@ -12,9 +12,6 @@
 export default {
 data(){
     return{
-        items: {
-        thing: '1'
-    }
     }
     
 }
