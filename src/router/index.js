@@ -1,19 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Welcome from '@/components/Welcome'
-import Childhood from '@/components/Childhood'
-import College from '@/components/College'
-import China from '@/components/China'
-import California from '@/components/California'
-import CFFP from '@/components/CFFP'
-import DroneRacing from '@/components/DroneRacing'
-import Crypto from '@/components/Crypto'
-import Fatherhood from '@/components/Fatherhood'
-import Conclusion from '@/components/Conclusion'
+import Welcome from '../components/Welcome.vue'
+import Birth from '../components/Birth.vue'
+import Childhood from '../components/Childhood'
+import College from '../components/College'
+import China from '../components/China'
+import California from '../components/California'
+import CFFP from '../components/CFFP'
+import DroneRacing from '../components/DroneRacing'
+import Crypto from '../components/Crypto'
+import Fatherhood from '../components/Fatherhood'
+import Conclusion from '../components/Conclusion.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

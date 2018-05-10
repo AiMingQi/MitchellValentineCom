@@ -40,6 +40,8 @@
             <h1>
               Welcome
             </h1>
+            <router-view></router-view>
+          
           </v-layout>
         </v-slide-y-transition>
       </v-container>
@@ -66,6 +68,7 @@
 </template>
 
 <script>
+
   export default {
     data () {
       return {
