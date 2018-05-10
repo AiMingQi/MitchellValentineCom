@@ -18,6 +18,7 @@
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title v-text="item.title"></v-list-tile-title>
+           <router-link :to="{ name: item.name }">{{item.title}}</router-link>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -76,7 +77,10 @@
         drawer: true,
         fixed: false,
         items: [
-          { icon: 'bubble_chart', title: 'Inspire' }
+          { icon: 'bubble_chart', title: 'Birth', name: 'birth' },
+          { icon: 'bubble_chart', title: 'Childhood', name: 'childhood' },
+          { icon: 'bubble_chart', title: 'College', name: 'college' },
+          { icon: 'bubble_chart', title: 'China', name: 'china' }
         ],
         miniVariant: false,
         right: true,

@@ -1,14 +1,18 @@
 <template>
-  <div id="Birth">
+<div id="Birth">
       <h1>
           Birth
       </h1>
+      
   </div>
+  
 </template>
 
 <script>
 export default {
 data(){
+    return{
+    }
     
 }
 }
