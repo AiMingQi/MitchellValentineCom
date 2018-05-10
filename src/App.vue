@@ -38,11 +38,7 @@
       <v-container fluid>
         <v-slide-y-transition mode="out-in">
           <v-layout column align-center>
-            <h1>
-              Welcome
-            </h1>
             <router-view></router-view>
-          
           </v-layout>
         </v-slide-y-transition>
       </v-container>
@@ -80,7 +76,13 @@
           { icon: 'bubble_chart', title: 'Birth', name: 'birth' },
           { icon: 'bubble_chart', title: 'Childhood', name: 'childhood' },
           { icon: 'bubble_chart', title: 'College', name: 'college' },
-          { icon: 'bubble_chart', title: 'China', name: 'china' }
+          { icon: 'bubble_chart', title: 'China', name: 'china' },
+          { icon: 'bubble_chart', title: 'California', name: 'california' },
+          { icon: 'bubble_chart', title: 'CFFP', name: 'cffp' },
+          { icon: 'bubble_chart', title: 'Drone Racing', name: 'droneracing' },
+          { icon: 'bubble_chart', title: 'Crypto', name: 'crypto' },
+          { icon: 'bubble_chart', title: 'Fatherhood', name: 'fatherhood' },
+          { icon: 'bubble_chart', title: 'Conclusion', name: 'conclusion' }
         ],
         miniVariant: false,
         right: true,
