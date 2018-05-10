@@ -12,14 +12,17 @@
           value="true"
           v-for="(item, i) in items"
           :key="i"
+          
         >
+         <router-link :to="{ name: item.name }">
           <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
+            <v-icon color="white" v-html="item.icon"></v-icon>
           </v-list-tile-action>
+          </router-link>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
-           <router-link :to="{ name: item.name }">{{item.title}}</router-link>
+            <v-list-tile-title v-text="item.title"></v-list-tile-title>         
           </v-list-tile-content>
+           
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -28,7 +31,7 @@
       <v-btn icon @click.stop="miniVariant = !miniVariant">
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+     <router-link :to="{ name: 'welcome' }"> <v-toolbar-title v-text="title"></v-toolbar-title></router-link>
       <v-spacer></v-spacer>
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>menu</v-icon>
@@ -73,16 +76,16 @@
         drawer: true,
         fixed: false,
         items: [
-          { icon: 'bubble_chart', title: 'Birth', name: 'birth' },
-          { icon: 'bubble_chart', title: 'Childhood', name: 'childhood' },
-          { icon: 'bubble_chart', title: 'College', name: 'college' },
-          { icon: 'bubble_chart', title: 'China', name: 'china' },
-          { icon: 'bubble_chart', title: 'California', name: 'california' },
-          { icon: 'bubble_chart', title: 'CFFP', name: 'cffp' },
-          { icon: 'bubble_chart', title: 'Drone Racing', name: 'droneracing' },
-          { icon: 'bubble_chart', title: 'Crypto', name: 'crypto' },
-          { icon: 'bubble_chart', title: 'Fatherhood', name: 'fatherhood' },
-          { icon: 'bubble_chart', title: 'Conclusion', name: 'conclusion' }
+          { icon: 'pregnant_woman', title: 'Birth', name: 'birth' },
+          { icon: 'android', title: 'Childhood', name: 'childhood' },
+          { icon: 'account_balance', title: 'College', name: 'college' },
+          { icon: 'translate', title: 'China', name: 'china' },
+          { icon: 'bug_report', title: 'California', name: 'california' },
+          { icon: 'trending_up', title: 'CFFP', name: 'cffp' },
+          { icon: 'flight_takeoff', title: 'Drone Racing', name: 'droneracing' },
+          { icon: 'toll', title: 'Crypto', name: 'crypto' },
+          { icon: 'flare', title: 'Fatherhood', name: 'fatherhood' },
+          { icon: 'accessibility_new', title: 'Conclusion', name: 'conclusion' }
         ],
         miniVariant: false,
         right: true,
