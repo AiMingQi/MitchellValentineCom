@@ -4,12 +4,12 @@ import 'firebase/auth';
 
 // Initialize Firebase, copied from cloud console
 var config = {
-  apiKey: "AIzaSyCMtXXtHW2-JRY8Qb479-nIQ8kwRUN3xuA",
-  authDomain: "crypto-catalyst.firebaseapp.com",
-  databaseURL: "https://crypto-catalyst.firebaseio.com",
-  projectId: "crypto-catalyst",
-  storageBucket: "crypto-catalyst.appspot.com",
-  messagingSenderId: "324601492240"
+  apiKey: "AIzaSyBouzhlH3Sl9lgdifrUPJD7eFVhYEI6Kb8",
+  authDomain: "mitchellvalentinecom-8b126.firebaseapp.com",
+  databaseURL: "https://mitchellvalentinecom-8b126.firebaseio.com",
+  projectId: "mitchellvalentinecom-8b126",
+  storageBucket: "mitchellvalentinecom-8b126.appspot.com",
+  messagingSenderId: "547830590140"
 };
 firebase.initializeApp(config);
 
