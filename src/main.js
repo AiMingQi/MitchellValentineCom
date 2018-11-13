@@ -1,14 +1,48 @@
 import Vue from 'vue'
-import App from './App.vue'
 import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.css'
+import App from './App.vue'
 import router from './router'
+import store from './store'
+import ability from './ability'
+import { abilitiesPlugin } from '@casl/vue'
 
+// import { Connect } from 'uport-connect'
 
-Vue.use(Vuetify)
+// const uport = new Connect('Crypto-Catalyst', {network: 'mainnet'})
+
+import 'vuetify/dist/vuetify.min.css' 
+import './style/site.css'
+
+// index.js or main.js
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+
+// uport.requestDisclosure({
+//   requested: ['name','country'],
+//   notifications: true
+// })
+// uport.onResponse('disclosureReq').then(payload => {
+//   const address = payload.address
+//   console.log(payload)
+// })
+
+Vue.use(abilitiesPlugin, ability)
+
+// TODO: the next line is added for debugging purposes and should be removed for production build
+window.ability = ability
+
+Vue.use(Vuetify, {
+  theme: {
+    primary: '#FF9F00',
+    secondary: '#033E22'
+  }
+})
+
+Vue.use(require('vue-moment'));
+
+Vue.config.productionTip = false
 
 new Vue({
-  el: '#app',
   router,
+  store,
   render: h => h(App)
-})
+}).$mount('#app')

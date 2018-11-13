@@ -1,97 +1,107 @@
-<template>
-  <v-app dark>
-    <v-navigation-drawer
-      fixed
-      :mini-variant="miniVariant"
+<template lang="pug">
+  v-app(dark)
+    v-navigation-drawer(
+      :mini-variant.sync="miniVariant"
       :clipped="clipped"
       v-model="drawer"
-      app
-    >
-      <v-list>
-        <v-list-tile 
-          value="true"
-          v-for="(item, i) in items"
-          :key="i"
-          
-        >
-         <router-link :to="{ name: item.name }">
-          <v-list-tile-action>
-            <v-icon color="white" v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          </router-link>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>         
-          </v-list-tile-content>
-           
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-     <router-link :to="{ name: 'welcome' }"> <v-toolbar-title v-text="title"></v-toolbar-title></router-link>
-      <v-spacer></v-spacer>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>menu</v-icon>
-      </v-btn>
-    </v-toolbar>
-    <v-content>
-      <v-container fluid>
-        <v-slide-y-transition mode="out-in">
-          <v-layout column align-center>
-            <router-view></router-view>
-          </v-layout>
-        </v-slide-y-transition>
-      </v-container>
-    </v-content>
-    <v-navigation-drawer
-      temporary
-      :right="right"
-      v-model="rightDrawer"
       fixed
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
-    </v-footer>
-  </v-app>
+      light
+      app)
+      v-card.pa-3(dark)
+        h2 Top 5 Ways Crypto is Changing the World
+      v-list
+        v-list-tile(
+          router
+          :to="item.to"
+          :key="i"
+          v-for="(item, i) in items"
+          exact
+          )
+            v-list-tile-action
+              strong {{i+1}}
+            v-list-tile-title.index_title(v-text="item.title")
+      v-img.ml-2(src="/banner-logo.png")
+      v-divider.my-3
+      p.text-xs-center.black--text Useful Links
+      v-btn.mt-3(href="https://www.coinbase.com/join/595aacbcf7cf5b058fdf5a04" target="_blank" rel="noopener" color="secondary" block large) Get Some Crypto
+      v-card.text-xs-center.pb-3
+        v-card-text
+          v-btn(href="https://coinmarketcap.com" target="_blank" rel="noopener" block color="secondary") Coin Market Cap
+          v-btn(href="http://foxstreetcompound.org/" target="_blank" rel="noopener" block color="secondary") Fox Street Compound
+
+    v-toolbar.ma-1.banner(fixed app :clipped-left="clipped" height="100px")
+      v-toolbar-side-icon(@click="drawer = !drawer")
+      v-img.hidden-sm-and-down(src="/banner-logo.png" max-height="100px" height="100px" min-height="100px" contain position="left")
+      h3 Where the Reaction is Taking Place
+      v-spacer
+      v-btn(to="/" icon flat)
+        v-icon home
+    v-content
+      v-container
+        router-view
+    v-footer(:fixed="fixed" app)
+      span.ml-5 &copy; 2018 Crypto Catalyst 
+      //- span.ml-5 {{store.currentUser.displayName}}
+      v-spacer
+      v-btn(href="https://brave.com/cry696" target="_blank" rel="noopener") Use Brave Browser
+      //- v-btn(@click.prevent="signInWithGoogle" v-if="store.currentUser == null") L
+      
+
 </template>
 
 <script>
+import { store } from '@/store';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
-  export default {
-    data () {
-      return {
-        clipped: false,
-        drawer: true,
-        fixed: false,
-        items: [
-          { icon: 'pregnant_woman', title: 'Birth', name: 'birth' },
-          { icon: 'android', title: 'Childhood', name: 'childhood' },
-          { icon: 'account_balance', title: 'College', name: 'college' },
-          { icon: 'translate', title: 'China', name: 'china' },
-          { icon: 'bug_report', title: 'California', name: 'california' },
-          { icon: 'trending_up', title: 'CFFP', name: 'cffp' },
-          { icon: 'flight_takeoff', title: 'Drone Racing', name: 'droneracing' },
-          { icon: 'toll', title: 'Crypto', name: 'crypto' },
-          { icon: 'flare', title: 'Fatherhood', name: 'fatherhood' },
-          { icon: 'accessibility_new', title: 'Conclusion', name: 'conclusion' }
-        ],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Mitchell Valentine'
-      }
+export default {
+  data () {
+    return {
+      store,
+      clipped: false,
+      drawer: true,
+      fixed: false,
+      items: [
+        { title: 'Liquid Democracy', to: '/liquid-democracy' },
+        { title: 'Instant Money', to: '/instant-money' },
+        { title: 'Democratized VC', to: '/democratized-vc' },
+        { title: 'Supply Chain Transparency', to: '/supply-chain-transparency' },
+        { title: 'Historical Records', to: '/historical-records' }
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Crypto Catalyst'
+    }
+  },
+  methods: {
+    signInWithGoogle() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
     }
   }
+}
 </script>
+<style scoped>
+.index_title { font-size: 1.1em; }
+
+.banner {
+  background: url('/banner-bg.png');
+  background-repeat: repeat-x;
+  }
+</style>
+
+<style>
+
+p {
+  font-size: 16px;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+</style>
+
