@@ -1,4 +1,4 @@
-# Crypto-Catalyst Vuejs Project
+# MitchellValentine.com Vuejs Project
 
 ## Project setup
 ```
