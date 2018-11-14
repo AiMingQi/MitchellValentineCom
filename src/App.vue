@@ -1,13 +1,37 @@
 <template lang="pug">
-  div#app
-    v-navigation-drawer(app)
-    v-toolbar(app)
-      router-link(to="/") Home
-      router-link(to="/about") About
+  v-app(dark)
+    v-navigation-drawer(
+      v-model="drawer"
+      clipped
+      fixed
+      app
+      )
+      v-list(dense)
+        v-list-tile(@click="")
+          v-list-tile-action
+            v-icon dashboard
+          v-list-tile-content
+            v-list-tile-title Dashboard
+        v-list-tile(@click="")
+          v-list-tile-action
+            v-icon settings
+          v-list-tile-content
+            v-list-tile-title Settings
+    v-toolbar(
+      fixed
+      clipped-left
+      app
+      )
+      v-toolbar-side-icon(@click.stop="drawer = !drawer")
+      v-toolbar-title Application
+      v-spacer
+      v-btn(to="/") Home 
+      v-btn(to="/about") About
     v-content
-      v-container(fluid)
+      v-container(fluid fill-height)
         router-view
-    v-footer(app)
+    v-footer(app fixed)
+      span.pl-3 &copy; 2018 - Mitchell Valentine
 </template>
 
 
