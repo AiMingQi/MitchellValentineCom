@@ -1,0 +1,57 @@
+[debug] [2018-11-14T15:56:13.351Z] ----------------------------------------------------------------------
+[debug] [2018-11-14T15:56:13.353Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\m.valentinecrumb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2018-11-14T15:56:13.354Z] CLI Version:   6.1.0
+[debug] [2018-11-14T15:56:13.354Z] Platform:      win32
+[debug] [2018-11-14T15:56:13.354Z] Node Version:  v9.7.1
+[debug] [2018-11-14T15:56:13.355Z] Time:          Wed Nov 14 2018 08:56:13 GMT-0700 (Mountain Standard Time)
+[debug] [2018-11-14T15:56:13.355Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-14T15:56:13.366Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-14T15:56:13.367Z] > authorizing via signed-in user
+[debug] [2018-11-14T15:56:13.367Z] [iam] checking project mitchellvalentinecom-8b126 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2018-11-14T15:56:13.369Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mitchellvalentinecom-8b126:testIamPermissions  
+
+[debug] [2018-11-14T15:56:13.608Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-14T15:56:13.610Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mitchellvalentinecom-8b126  
+ 
+[debug] [2018-11-14T15:56:13.857Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'mitchellvalentinecom-8b126'...
+[info] 
+[info] i  deploying storage, firestore, hosting
+[debug] [2018-11-14T15:56:13.862Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/mitchellvalentinecom-8b126  
+ 
+[debug] [2018-11-14T15:56:14.194Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-11-14T15:56:14.196Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/mitchellvalentinecom-8b126:test  
+
+[debug] [2018-11-14T15:56:14.335Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-11-14T15:56:14.339Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/mitchellvalentinecom-8b126:test  
+
+[debug] [2018-11-14T15:56:14.430Z] <<< HTTP RESPONSE 200
+[info] +  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-11-14T15:56:14.433Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/mitchellvalentinecom-8b126/versions  
+
+[debug] [2018-11-14T15:56:15.126Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-11-14T15:56:15.127Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/mitchellvalentinecom-8b126/rulesets  
+
+[debug] [2018-11-14T15:56:15.312Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-14T15:56:15.313Z] [rules] created ruleset projects/mitchellvalentinecom-8b126/rulesets/97af54d8-38d1-4815-99cf-b21865f2da90
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-11-14T15:56:15.314Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/mitchellvalentinecom-8b126/rulesets  
+
+[debug] [2018-11-14T15:56:15.315Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/mitchellvalentinecom-8b126/databases/(default)/indexes  
+ 
+[debug] [2018-11-14T15:56:15.475Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-14T15:56:15.475Z] [rules] created ruleset projects/mitchellvalentinecom-8b126/rulesets/d0199915-5487-4ca4-b5e4-0140263ae505
+[debug] [2018-11-14T15:56:15.712Z] <<< HTTP RESPONSE 200
+[info] i  hosting[mitchellvalentinecom-8b126]: beginning deploy...
+[info] i  hosting[mitchellvalentinecom-8b126]: found 38 files in dist
+[debug] [2018-11-14T15:56:15.736Z] [hosting] hash cache [ZGlzdA] load error: lines is not defined
+[debug] [2018-11-14T15:56:16.055Z] [hosting] hash cache [ZGlzdA] stored for 38 files
+[debug] [2018-11-14T15:56:16.055Z] [hosting][hash queue][FINAL]
+[debug] [2018-11-14T15:56:16.055Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/mitchellvalentinecom-8b126/versions/aa811052f499d165:populateFiles  
+ <request body omitted>
