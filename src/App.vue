@@ -27,8 +27,8 @@
       v-spacer
       v-btn(to="/") Home 
       v-btn(to="/about") About
-    v-content
-      v-container(fluid fill-height)
+    v-content.pa-1
+      v-container(fluid)
         router-view
     v-footer(app fixed)
       span.pl-3 &copy; 2018 - Mitchell Valentine

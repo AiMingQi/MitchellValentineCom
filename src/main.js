@@ -2,12 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import Vuetify from 'vuetify'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 
 // index.js or main.js
 import 'vuetify/dist/vuetify.min.css'
-// Helpers
-import colors from 'vuetify/es5/util/colors'
- 
+
+Vue.use(VueYouTubeEmbed)
+
 Vue.use(Vuetify, {
   theme: {
     primary: '#fff', 
