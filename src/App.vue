@@ -23,7 +23,7 @@
       app
       )
       v-toolbar-side-icon(@click.stop="drawer = !drawer")
-      v-toolbar-title Application
+      v-toolbar-title Mitchell Valentine
       v-spacer
       v-btn(to="/") Home 
       v-btn(to="/about") About
@@ -33,7 +33,16 @@
     v-footer(app fixed)
       span.pl-3 &copy; 2018 - Mitchell Valentine
 </template>
-
+<script>
+  export default {
+    data: () => ({
+      drawer: null
+    }),
+    props: {
+      source: String
+    }
+  }
+</script>
 
 <style>
 #app {
@@ -41,7 +50,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
   margin-top: 60px;
 }
 </style>

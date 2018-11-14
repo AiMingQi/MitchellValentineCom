@@ -1,6 +1,10 @@
 <template lang="pug">
-  div.home
-    h1 Mitchell Valentine
+  v-container.home
+    v-layout(row wrap)
+      v-flex(xs6 offset-xs3)
+        v-card.pa-3
+          h1.primary--text Mitchell Valentine
+          v-img.mx-auto(src="/images/logo.png" alt="Mitchell Valentine Logo" width="50%")
 </template>
 <script>
 
