@@ -1,10 +1,10 @@
 <template lang="pug">
     v-layout(row wrap)
-      v-flex(xs12 md5)
+      v-flex(d-flex xs12 md5 child-flex)
         v-card.pa-3.ma-1
           h1.primary--text Mitchell Valentine
-          v-img.mx-auto(src="/images/logo.png" alt="Mitchell Valentine Logo" width="50%" light)
-      v-flex(xs12 md7)
+          v-img.mx-auto(src="/images/logo.png" alt="Mitchell Valentine Logo" width="61.8%" light)
+      v-flex(d-flex xs12 md7)
         v-card.pa-3.ma-1
           div.videoWrapper
             youtube(
