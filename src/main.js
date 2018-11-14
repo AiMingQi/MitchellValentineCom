@@ -3,9 +3,12 @@ import App from './App.vue'
 import router from './router'
 import Vuetify from 'vuetify'
 import VueYouTubeEmbed from 'vue-youtube-embed'
-
+import VueInstagram from 'vue-instagram'
+ 
 // index.js or main.js
 import 'vuetify/dist/vuetify.min.css'
+
+Vue.use(VueInstagram)
 
 Vue.use(VueYouTubeEmbed)
 

@@ -11,13 +11,37 @@
               video-id="zFd-YQWGIk8" 
               :player-vars="{autoplay: 0}"
               ) 
+      v-flex(d-flex xs12 md7 child-flex)
+        v-card.pa-3.ma-1
+          h1 Instagram
+          vue-instagram(token="aimingqi" :count="5")
+            template(slot="feeds" slot-scope="props")
+      v-flex(d-flex xs12 md5 child-flex)
+        v-card.pa-3.ma-1
+          h1.primary--text Logos
+          v-card(light).pa-3.ma-1
+            a(href="https://Crypto-Catalyst.com" target="_blank" rel="noopener")
+              v-img.mx-auto.my-3(src="/images/Crypto-Catalyst-logo.png" alt="Crypto-Catalyst Logo" width="61.8%" light)
+          v-card.pa-3.ma-1
+            a(href="https://RaceDayQuads.com" target="_blank" rel="noopener")
+              v-img.mx-auto.my-3(src="/images/RaceDayQuads-Logo-bl.png" alt="RaceDayQuads.com Logo" width="90%" light)
+          v-card(light).pa-3.ma-1
+            a(href="https://www.cffp.edu/foundations" target="_blank" rel="noopener")
+              v-img.mx-auto.my-3(src="/images/FPQP.png" alt="FPQP Logo" width="61.8%" light)
+          v-card().pa-3.ma-1
+            a(href="http://ThoseFunkenDronez.com" target="_blank" rel="noopener")
+              v-img.mx-auto.my-3(src="/images/TFD-Logo.png" alt="TFD Logo" width="61.8%" light)
+          v-card(light).pa-3.ma-1
+            a(href="https://www.multigp.com/chapters/view/?chapter=AuroraFPV" target="_blank" rel="noopener")
+              v-img.mx-auto.my-3(src="/images/APD-Logo.png" alt="APD Logo" width="61.8%" light)
+          
 </template>
 <script>
-
+import VueInstagram from 'vue-instagram'
 export default {
   name: 'home',
   components: {
-    
+    VueInstagram
   }
 }
 </script>
