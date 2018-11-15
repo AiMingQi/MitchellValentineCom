@@ -14,7 +14,7 @@
       v-flex(d-flex xs12 md7 child-flex)
         v-card.pa-3.ma-1
           h1 Instagram
-          vue-instagram(token="aimingqi" :count="5")
+          vue-instagram(token="31801281.8314d34.aeaabe33d23043c088ddb38db8487830" :count="5")
             template(slot="feeds" slot-scope="props")
       v-flex(d-flex xs12 md5 child-flex)
         v-card.pa-3.ma-1
