@@ -14,8 +14,17 @@
       v-flex(d-flex xs12 md7 child-flex)
         v-card.pa-3.ma-1
           h1 Instagram
-          vue-instagram(token="31801281.8314d34.aeaabe33d23043c088ddb38db8487830" :count="5")
-            template(slot="feeds" slot-scope="props")
+            vue-instagram(token="31801281.8314d34.aeaabe33d23043c088ddb38db8487830" :count="6" mediaType="image")
+                template(slot="feeds" slot-scope="props")
+                  v-layout(row wrap)
+                    v-flex(d-flex xs12 md6 order-xs2 order-md1)
+                      v-card.pa-2
+                        v-img(:src="props.feed.images.standard_resolution.url" min-width="150px" min-height="150px" max-width="640px" max-height="640px")
+                    v-flex(d-flex xs12 md6 order-xs1 order-md2 child-flex)
+                      v-card.pa-2
+                        h3.pt-5 {{props.feed.caption.text}}
+                template(slot="error" slot-scope="props")
+                  div.fancy-alert {{props.error_message}}
       v-flex(d-flex xs12 md5 child-flex)
         v-card.pa-3.ma-1
           h1.primary--text Logos
@@ -37,11 +46,10 @@
           
 </template>
 <script>
-import VueInstagram from 'vue-instagram'
 export default {
   name: 'home',
   components: {
-    VueInstagram
+    
   }
 }
 </script>
