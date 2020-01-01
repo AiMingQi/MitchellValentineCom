@@ -29,17 +29,14 @@
         v-card.pa-3.ma-1
           h1.primary--text Logos
           v-card(light).pa-3.ma-1
-            a(href="https://Crypto-Catalyst.com" target="_blank" rel="noopener")
-              v-img.mx-auto.my-3(src="/images/Crypto-Catalyst-logo.png" alt="Crypto-Catalyst Logo" width="61.8%" light)
+            a(href="https://UniTEGRITY.com" target="_blank" rel="noopener")
+              v-img.mx-auto.my-3(src="/images/UniTEGRITY-Offering.png" alt="UniTEGRITY Logo" width="61.8%" light)
           v-card.pa-3.ma-1
             a(href="https://RaceDayQuads.com" target="_blank" rel="noopener")
               v-img.mx-auto.my-3(src="/images/RaceDayQuads-Logo-bl.png" alt="RaceDayQuads.com Logo" width="90%" light)
           v-card(light).pa-3.ma-1
             a(href="https://www.cffp.edu/foundations" target="_blank" rel="noopener")
               v-img.mx-auto.my-3(src="/images/FPQP.png" alt="FPQP Logo" width="61.8%" light)
-          v-card().pa-3.ma-1
-            a(href="http://ThoseFunkenDronez.com" target="_blank" rel="noopener")
-              v-img.mx-auto.my-3(src="/images/TFD-Logo.png" alt="TFD Logo" width="61.8%" light)
           v-card(light).pa-3.ma-1
             a(href="https://www.multigp.com/chapters/view/?chapter=AuroraFPV" target="_blank" rel="noopener")
               v-img.mx-auto.my-3(src="/images/APD-Logo.png" alt="APD Logo" width="61.8%" light)

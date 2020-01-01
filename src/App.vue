@@ -8,36 +8,21 @@
       )
       v-list(dense)
         v-subheader Live Sites
-        v-list-tile(href="https://cffp.edu" target="_blank" rel="noopener")
-          v-list-tile-action
-            v-icon account_balance
-          v-list-tile-content
-            v-list-tile-title CFFP.edu
-        v-list-tile(href="https://Crypto-Catalyst.com" target="_blank" rel="noopener")
+        v-list-tile(href="https://UniTEGRITY.com" target="_blank" rel="noopener")
           v-list-tile-action
             v-icon attach_money
           v-list-tile-content
-            v-list-tile-title Crypto-Catalyst.com
+            v-list-tile-title UniTEGRITY.com
         v-list-tile(href="https://comradebrewing.com" target="_blank" rel="noopener")
           v-list-tile-action
             v-icon local_drink
           v-list-tile-content
             v-list-tile-title Comrade Brewery
-        v-list-tile(href="http://thosefunkendronez.com" target="_blank" rel="noopener")
-          v-list-tile-action
-            v-icon airplanemode_active
-          v-list-tile-content
-            v-list-tile-title Those Funken Dronez
         v-list-tile(href="http://swampthing.org" target="_blank" rel="noopener")
           v-list-tile-action
             v-icon landscape
           v-list-tile-content
             v-list-tile-title Siegel Environmental
-        v-list-tile(href="http://charles-hardy.com" target="_blank" rel="noopener")
-          v-list-tile-action
-            v-icon portrait
-          v-list-tile-content
-            v-list-tile-title Charles Hardy
         v-subheader Social Links
         v-list-tile(href="https://www.facebook.com/mitchell.valentine" target="_blank" rel="noopener")
           v-list-tile-action
